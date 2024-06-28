@@ -1,0 +1,113 @@
+@font-face {
+    font-family: CFGlitchCity;
+    src: url('../font/CFGlitchCity-Regular.ttf');
+}
+
+body{
+    background-image: url('../images/fondo.jpg');
+    background-size:cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    height: 100vh;
+}
+
+h1{
+    font-family: CFGlitchCity;
+    color:rgb(97, 254, 136);
+    
+}
+
+#form{        
+    width: 400px;
+    height: 400px;
+    border: 5px rgb(97, 254, 136) double;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#lnombre, #lnombre:active, #lnombre:hover, 
+#lpassword, #lpassword:active, #lpassword:hover{
+    outline: none;
+    border: none;
+}
+
+label{
+    font-family: CFGlitchCity;
+}
+
+button{
+    background-color: rgb(97, 254, 136);
+    font-family:CFGlitchCity ;
+    font-weight: 600;
+    padding: 5px;
+    width: 200px;
+    border: none;
+    margin-top: 100px;
+}
+
+#errorMsj{
+    font-family:CFGlitchCity ;
+    color: red;
+}
+
+#lnombre, #lpassword{
+    text-align: center;    
+}
+
+label, small{
+    text-shadow: 1px 1px 1px rgb(255, 255, 255);
+}
+/* STYLE DASHBOARD */
+
+#dash{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h2{
+        font-family:CFGlitchCity;
+        text-shadow: 1px 1px 1px rgb(255, 0, 0); 
+        text-align: center;
+    }
+
+     section{
+            width: 400px;
+            height: 400px;
+            border: 5px double rgb(97, 254, 136);
+
+        H1{
+            font-family:CFGlitchCity;
+            text-shadow: 1px 1px 1px rgb(0, 0, 0); 
+            text-align: center;
+        }
+        
+        img{
+            width: 150px;
+            height: 150px;
+            border: 5px double rgb(97, 254, 136);
+            border-radius: 20px;
+        }
+
+        #card{
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             flex-direction: column;
+
+             p{
+                font-family:CFGlitchCity;
+                color:rgb(97, 254, 136);
+                text-shadow: 1px 3px 3px rgb(255, 0, 0); 
+                font-size: 15px;
+                text-align: center;
+             }
+        }
+     }
+}
