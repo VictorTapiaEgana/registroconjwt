@@ -15,22 +15,20 @@ app.use(express.static(path.join(process.cwd(),'/pages')));
 function validaToken(req, res, next) {
 
     const header = req.headers['authorization'];
-    const token = header && header.split(' ')[1];
-
-  
+    const token = header && header.split(' ')[1];  
     
     if (token == null) return res.status(401).send('FALTA TOKEN DE VALIDACION !!!');
 
     jwt.verify(token, process.env.SECRETKEY, (err) => {
     
-        if (err) return res.sendStatus(403).status('TOKEN CADUCADO O INVALIDO !!!');           
+        if (err) return res.sendStatus(403).status('TOKEN CADUCADO O INVALIDO !!!');     
+
         next();
 
     });
 };
 
-app.get('/dashboard',validaToken,(req,res)=>{
-  
+app.get('/dashboard',validaToken,(req,res)=>{  
 
     res.status(200).json({ status: 'Acceso permitido' });
 
